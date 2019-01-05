@@ -36,6 +36,21 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# Use postgres as database
+gem 'pg'
+
+# Gem for settings and configuration
+gem 'settingslogic'
+
+# For API
+gem 'swagger-docs'
+gem 'httparty', "~>0.15.5"
+gem 'rabl'
+
+# Gem for json 
+gem 'rails-patch-json-encode'
+gem 'oj'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

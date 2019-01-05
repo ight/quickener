@@ -28,3 +28,8 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignore .yml files from config folder
+/config/database.yml
+/config/quickener.yml
+
