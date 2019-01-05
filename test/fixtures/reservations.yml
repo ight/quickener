@@ -1,0 +1,13 @@
+prakash_reservation:
+  guest: prakash_guest
+  restourant: bbq
+  shift: morning
+  table: bar_top
+  reservation_time: <%= DateTime.now.beginning_of_day + 10.hours %>
+
+prakash_second_reservation:
+  guest: prakash_guest
+  restourant: mirazur
+  shift: morning
+  table: single_to_couple
+  reservation_time: <%= DateTime.now.beginning_of_day + 11.hours %>

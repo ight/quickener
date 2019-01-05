@@ -1,0 +1,36 @@
+bar_top:
+  name: "bar top"
+  min_num: 1
+  max_num: 1
+  restourant: bbq
+
+single_to_couple:
+  name: "single to couple"
+  min_num: 1
+  max_num: 2
+  restourant: mirazur
+
+two_to_four_table:
+  name: "two four table"
+  min_num: 2
+  max_num: 4
+  restourant: gaggan
+
+booths:
+  name: "booths"
+  min_num: 5
+  max_num: 10
+  restourant: odette
+
+family_d_table:
+  name: "family dining table"
+  min_num: 11
+  max_num: 15
+  restourant: bbq
+
+out_door:
+  name: "out door"
+  min_num: 16
+  max_num: 30
+  restourant: mirazur
+
