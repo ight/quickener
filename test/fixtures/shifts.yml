@@ -1,0 +1,11 @@
+morning:
+  shift_type: "morning"
+  start_time: <%= (DateTime.now.beginning_of_day + 8.hours).strftime("%H:%Mam") %>
+  end_time: <%= (DateTime.now.beginning_of_day + 14.hours).strftime("%H:%Mam") %>
+  restourant: bbq
+
+evening:
+  shift_type: "evening"
+  start_time: <%= (DateTime.now.beginning_of_day + 14.hours).strftime("%H:%Mam") %>
+  end_time: <%= (DateTime.now.beginning_of_day + 20.hours).strftime("%H:%Mam") %>
+  restourant: mirazur
