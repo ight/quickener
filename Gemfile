@@ -63,6 +63,15 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # Mocha for mocking and stubing in test cases.
+  # make it require false here because dont want to autoload it
+  # rather will manually load at test_helper as per documentation.
+  gem 'mocha', require: false
+  gem 'minitest-reporters'
+  gem 'minitest-stub-const'
+  gem "minitest"
+  gem 'rails-controller-testing'
 end
 
 group :test do
@@ -71,6 +80,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  gem 'shoulda'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
