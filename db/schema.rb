@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_05_063253) do
+ActiveRecord::Schema.define(version: 2019_01_06_045318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2019_01_05_063253) do
     t.datetime "reservation_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "guest_count"
     t.index ["guest_id"], name: "index_reservations_on_guest_id"
     t.index ["restourant_id"], name: "index_reservations_on_restourant_id"
     t.index ["shift_id"], name: "index_reservations_on_shift_id"
@@ -47,10 +48,10 @@ ActiveRecord::Schema.define(version: 2019_01_05_063253) do
   create_table "shifts", force: :cascade do |t|
     t.bigint "restourant_id"
     t.string "shift_type"
-    t.string "start_time"
-    t.string "end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.index ["restourant_id"], name: "index_shifts_on_restourant_id"
   end
 

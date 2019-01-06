@@ -1,0 +1,6 @@
+en:
+  errors:
+    invalid_shift_time: 'Shift start time can not be greater than end time.'
+    invalid_reservation_time: "Invalid reservation time is provided"
+    invalid_guest_count: "Min guest count can't be greater than max guest count"
+    invalid_user_number: "Please check guest count, not in range for the table"
