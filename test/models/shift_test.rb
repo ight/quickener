@@ -38,6 +38,25 @@ class ShiftTest < ActiveSupport::TestCase
     assert_equal "Shift start time can not be greater than end time.", shift.errors.messages[:start_time][0]
   end
 
+  # Test Instance methods
+  test 'valid_reservation_time? valid time' do
+    shift = shifts(:morning)
+    time = DateTime.now.beginning_of_day + 10.hours
+    assert shift.valid_reservation_time?(time)
+  end
+
+  test 'valid_reservation_time? time less than start time' do
+    shift = shifts(:morning)
+    time = DateTime.now.beginning_of_day + 7.hours
+    assert_not shift.valid_reservation_time?(time)
+  end
+
+  test 'valid_reservation_time? time greater than end time' do
+    shift = shifts(:morning)
+    time = DateTime.now.beginning_of_day + 15.hours
+    assert_not shift.valid_reservation_time?(time)
+  end
+
   private
 
   def new_shift

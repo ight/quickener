@@ -38,6 +38,25 @@ class TableTest < ActiveSupport::TestCase
     assert_equal "Min guest count can't be greater than max guest count", table.errors.messages[:min_num][0]
   end
 
+  # Test Instance methods
+  test 'valid_guest_count? valid count' do
+    table = tables(:booths)
+    guest_count = 7
+    assert table.valid_guest_count?(guest_count)
+  end
+
+  test 'valid_guest_count? count less than minimum number' do
+    table = tables(:booths)
+    guest_count = 4
+    assert_not table.valid_guest_count?(guest_count)
+  end
+
+  test 'valid_guest_count? count greater than maximum number' do
+    table = tables(:booths)
+    guest_count = 11
+    assert_not table.valid_guest_count?(guest_count)
+  end
+
   private
 
   def new_table
