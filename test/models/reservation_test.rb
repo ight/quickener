@@ -63,6 +63,33 @@ class ReservationTest < ActiveSupport::TestCase
     assert_equal "Please check guest count, not in range for the table", reservation.errors.messages[:guest_count][0]
   end  
 
+  # Test Callbacks
+  test 'notify_guest called on create' do
+    reservation = new_reservation
+    reservation.expects(:notify_guest).once
+    reservation.save
+  end
+
+  test 'notify_guest called on update' do
+    reservation = reservations(:prakash_second_reservation)
+    reservation.guest_count = 2
+    reservation.expects(:notify_guest).once
+    reservation.save
+  end
+
+  test 'notify_restourant called on create' do
+    reservation = new_reservation
+    reservation.expects(:notify_restourant).once
+    reservation.save
+  end
+
+  test 'notify_restourant called on update' do
+    reservation = reservations(:prakash_second_reservation)
+    reservation.guest_count = 2
+    reservation.expects(:notify_restourant).once
+    reservation.save
+  end
+
   private
 
   def new_reservation
