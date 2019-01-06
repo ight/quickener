@@ -13,3 +13,4 @@ end
 QuickenerSettings['host'] ||= 'localhost'
 QuickenerSettings['relative_url'] ||= '/'
 QuickenerSettings['url'] ||= QuickenerSettings.build_url
+QuickenerSettings['application_name'] ||= 'Quickener'

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Swagger
   module Docs
     # Overriding the transform_path method in this class
