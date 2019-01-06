@@ -1,0 +1,9 @@
+<div>
+  <p> Dear <%= @guest.name.titleize %>!</p>
+  <p> Please find your reservation details</p>
+  <p> Restourant Name: <%= @restourant.name.titleize %></p>
+  <p> Reservation Time: <%= @reservation.reservation_time.ctime %></p>
+  <p> Table Name: <%= @table.name %></p>
+  <p> Number Of Guest: <%= @reservation.guest_count %></p>
+  <p> Thanks <%= @app %></p>
+</div>

@@ -1,0 +1,16 @@
+en:
+  mailers:
+    reservation_guest_mailer:
+      reservation_created:
+        subject: "Reservation confirmed"
+        line_1: "%{app_name}! confirms! your table at %{restourant_name}"
+      reservation_updated:
+        subject: "Reservation updated"
+        line_1: "%{app_name}! confirms! your table updated at %{restourant_name}"
+    reservation_restourant_mailer:
+      reservation_created:
+        subject: "Reservation confirmed"
+        line_1: "%{app_name}! confirms! %{guest_name} has booked a table"
+      reservation_updated:
+        subject: "Reservation updated"
+        line_1: "%{app_name}! confirms! %{guest_name} has updated the booking details"
