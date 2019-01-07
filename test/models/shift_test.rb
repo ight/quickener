@@ -40,13 +40,13 @@ class ShiftTest < ActiveSupport::TestCase
 
   # Test Instance methods
   test 'valid_reservation_time? valid time' do
-    shift = shifts(:morning)
+    shift = shifts(:morning_odette)
     time = DateTime.now.beginning_of_day + 10.hours
     assert shift.valid_reservation_time?(time)
   end
 
   test 'valid_reservation_time? time less than start time' do
-    shift = shifts(:morning)
+    shift = shifts(:morning_odette)
     time = DateTime.now.beginning_of_day + 7.hours
     assert_not shift.valid_reservation_time?(time)
   end
