@@ -25,15 +25,9 @@ class Shift < ApplicationRecord
   #
   # return: true or false.
   def valid_reservation_time?(reservation_time)
-    p reservation_time
-    p start_time
-    p end_time
     reservation_h = reservation_time.strftime("%H").to_i
     start_h = start_time.strftime("%H").to_i
     end_h = end_time.strftime("%H").to_i
-    p start_h
-    p end_h
-    p reservation_h
     if start_h < reservation_h && reservation_h < end_h
       return true
     else
