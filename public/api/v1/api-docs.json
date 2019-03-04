@@ -6,6 +6,14 @@
     {
       "path": "/api/v1/api/v1/reservations.{format}",
       "description": "Reservations Management"
+    },
+    {
+      "path": "/api/v1/api/v1/guests.{format}",
+      "description": "Guest Management"
+    },
+    {
+      "path": "/api/v1/api/v1/restourants.{format}",
+      "description": "Restourant Management"
     }
   ],
   "authorizations": null
