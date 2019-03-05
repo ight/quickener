@@ -24,6 +24,18 @@ module Api
         end
       end
 
+      swagger_api :index do
+        summary 'get list of restourants'
+        response :bad_request
+        response :forbidden
+        response :not_acceptable
+        response :unauthorized
+      end
+
+      def index
+        @restourants = Restourant.all
+      end
+
       private
 
       # Private methods

@@ -8,6 +8,38 @@
       "path": "/api/v1/restourants.json",
       "operations": [
         {
+          "summary": "get list of restourants",
+          "responseMessages": [
+            {
+              "code": 400,
+              "responseModel": null,
+              "message": "Bad Request"
+            },
+            {
+              "code": 401,
+              "responseModel": null,
+              "message": "Unauthorized"
+            },
+            {
+              "code": 403,
+              "responseModel": null,
+              "message": "Forbidden"
+            },
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "Api::V1::Restourants#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/api/v1/restourants.json",
+      "operations": [
+        {
           "summary": "Create restourant",
           "parameters": [
             {
