@@ -16,7 +16,7 @@ module Api
       end
 
       def create
-        @restourant = restourant.new(create_restourant)
+        @restourant = Restourant.new(create_restourant)
         if @restourant.save
           render 'api/v1/restourants/show', status: :created
         else

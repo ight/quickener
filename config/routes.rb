@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :reservations
       resources :guests
       resources :restourants
+      resources :tables
     end
   end
 end
